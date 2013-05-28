@@ -375,6 +375,7 @@ static UIFont *buttonFont = nil;
                                           animations:^{
                                               center.y -= kAlertViewBounce;
                                               _view.center = center;
+                                              _view.frame = CGRectIntegral(_view.frame);
                                           } 
                                           completion:^(BOOL finished) {
                                               [[NSNotificationCenter defaultCenter] postNotificationName:@"AlertViewFinishedAnimations" object:self];
